@@ -39,7 +39,7 @@ void outputarray(Matrix  Arr[])
         cout << endl;
     }
 }
-void sortArray(Matrix  arr[])
+void sortArray(Matrix  Arr[])
 {
     for (int i = 0; i < n; i++)
     {
