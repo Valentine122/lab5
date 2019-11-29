@@ -13,13 +13,13 @@ class Matrix
 private:
     double dArr[m];
 public:
-    friend void InputArray(Matrix Arr[]);
-    friend void OutputArray(Matrix Arr[]);
-    friend void SortArray(Matrix  Arr[]);
-    friend void CalcArray(Matrix Arr[]);
+    friend void inputarray(Matrix Arr[]);
+    friend void outputarray(Matrix Arr[]);
+    friend void sortarray(Matrix  Arr[]);
+    friend void calcarray(Matrix Arr[]);
 };
 
-void InputArray(Matrix  Arr[])
+void inputarray(Matrix  Arr[])
 {
     for (int i = 0; i < n; ++i)
         for (int j = 0; j < m; ++j)
@@ -28,7 +28,7 @@ void InputArray(Matrix  Arr[])
             cin >> Arr[i].dArr[j];
         }
 }
-void OutputArray(Matrix  Arr[])
+void outputarray(Matrix  Arr[])
 {
     for (int i = 0; i < n; ++i)
     {
@@ -39,7 +39,7 @@ void OutputArray(Matrix  Arr[])
         cout << endl;
     }
 }
-void SortArray(Matrix  arr[])
+void sortArray(Matrix  arr[])
 {
     for (int i = 0; i < n; i++)
     {
@@ -90,7 +90,7 @@ void SortArray(Matrix  arr[])
         }
     }
 }
-void CalcArray(Matrix Arr[]) {
+void calcarray(Matrix Arr[]) {
     double sum[n];
     for (int i = 0; i < n; i++) {
         sum[i] = 0;
@@ -120,12 +120,12 @@ int main()
 {
     Matrix  Array[n];
     cout << "Enter elements of matrix:\n" << endl;
-    InputArray(Array);
+    inputarray(Array);
     cout << "\nYour matrix:\n" << endl;
-    OutputArray(Array);
-    SortArray(Array);
+    outputarray(Array);
+    sortarray(Array);
     cout << "\nSorted matrix:\n" << endl;
-    OutputArray(Array);
+    outputarray(Array);
     cout << "\nCalculations:\n" << endl;
-    CalcArray(Array);
+    calcarray(Array);
 }
